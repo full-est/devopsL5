@@ -28,5 +28,4 @@ async def create_user(data: CreateUser):
 
 @router.delete("", status_code=status.HTTP_204_NO_CONTENT)
 async def delete_user(email: str):
-    '''Удаление пользователя'''
     db.delete_user_by_email(email)
